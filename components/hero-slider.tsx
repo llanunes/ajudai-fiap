@@ -46,7 +46,7 @@ export function HeroSlider() {
               {slide.description}
             </p>
             <Button className="bg-[#FF5722] hover:bg-[#F4511E] text-white px-8 py-6 text-lg rounded-md">
-              Quero Ajudar
+              Quero Ajudar!
             </Button>
           </div>
         </div>
