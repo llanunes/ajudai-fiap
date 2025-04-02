@@ -59,8 +59,6 @@ export function PartnershipCTA() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      console.log(values);
-
       toast({
         title: "Formulário enviado!",
         description: "Entraremos em contato em breve.",

@@ -25,7 +25,6 @@ export function Navigation() {
             AjudAí
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
               <Link
@@ -38,7 +37,6 @@ export function Navigation() {
             ))}
           </div>
 
-          {/* Mobile Navigation */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="md:hidden">

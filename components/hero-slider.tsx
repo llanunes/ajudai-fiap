@@ -10,7 +10,20 @@ const slides = [
     description:
       "Encontre organizações que ajudam pessoas em situação de vulnerabilidade",
     image:
-      "https://media.gettyimages.com/id/1498170916/photo/a-couple-is-taking-a-bag-of-food-at-the-food-and-clothes-bank.jpg?s=612x612&w=gi&k=20&c=OQXzpRYIt4_vr0b2tTz9Wsz8aCPi9FgUBwGSEeJaToM=",
+      "https://st5.depositphotos.com/62628780/73185/i/600/depositphotos_731855856-stock-photo-team-hands-circle-support-strength.jpg",
+  },
+  {
+    title: "Apoie quem precisa",
+    description: "Doe roupas, alimentos e outros itens para quem mais precisa",
+    image:
+      "https://www.selecta-es.com.br/wp-content/uploads/2019/09/23.JornalMetro-Solidariedade-Site.png",
+  },
+  {
+    title: "Transforme Vidas",
+    description:
+      "Ajude a transformar vidas com sua doação e faça a diferença na comunidade",
+    image:
+      "https://st5.depositphotos.com/46049982/69270/i/600/depositphotos_692702856-stock-photo-hand-putting-heart-donation-box.jpg",
   },
 ];
 

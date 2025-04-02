@@ -1,5 +1,6 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { CalendarDays, MapPin } from "lucide-react"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CalendarDays, MapPin } from "lucide-react";
+import Link from "next/link";
 
 const events = [
   {
@@ -26,33 +27,42 @@ const events = [
     description:
       "Venha conhecer e possivelmente adotar um novo amigo peludo. Todos os animais são vacinados e castrados.",
   },
-]
-
+];
 export function EventList() {
   return (
     <div>
-      <h2 className="text-3xl font-bold text-[#2B5329] mb-6">Próximos Eventos</h2>
-      <div className="space-y-6">
+      <h2 className="text-3xl font-bold text-[#2B5329] mb-6">
+        Próximos Eventos
+      </h2>
+      <div className="flex flex-col gap-3">
+        {" "}
         {events.map((event) => (
-          <Card key={event.id} className="hover:shadow-lg transition-shadow">
-            <CardHeader>
-              <CardTitle className="text-xl text-[#2B5329]">{event.title}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="flex items-center gap-2 text-gray-600 mb-2">
-                <CalendarDays className="h-5 w-5" />
-                <span>{event.date}</span>
-              </div>
-              <div className="flex items-center gap-2 text-gray-600 mb-4">
-                <MapPin className="h-5 w-5" />
-                <span>{event.location}</span>
-              </div>
-              <p className="text-gray-700">{event.description}</p>
-            </CardContent>
-          </Card>
+          <Link
+            key={event.id}
+            href={`/eventos/info-evento/${event.id}`}
+            passHref
+          >
+            <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+              <CardHeader>
+                <CardTitle className="text-xl text-[#2B5329]">
+                  {event.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center gap-2 text-gray-600 mb-2">
+                  <CalendarDays className="h-5 w-5" />
+                  <span>{event.date}</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-600 mb-4">
+                  <MapPin className="h-5 w-5" />
+                  <span>{event.location}</span>
+                </div>
+                <p className="text-gray-700">{event.description}</p>
+              </CardContent>
+            </Card>
+          </Link>
         ))}
       </div>
     </div>
-  )
+  );
 }
-

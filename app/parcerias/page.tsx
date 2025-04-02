@@ -1,7 +1,7 @@
-import { Heart, LineChart, Trophy } from "lucide-react"
-import { PartnershipTypes } from "@/components/partnership-types"
-import { PartnershipCTA } from "@/components/partnership-cta"
-import { Card, CardContent } from "@/components/ui/card"
+import { Heart, LineChart, Trophy } from "lucide-react";
+import { PartnershipTypes } from "@/components/partnership-types";
+import { PartnershipCTA } from "@/components/partnership-cta";
+import { Card, CardContent } from "@/components/ui/card";
 
 const benefits = [
   {
@@ -13,36 +13,42 @@ const benefits = [
   {
     title: "Visibilidade",
     icon: LineChart,
-    description: "Destaque sua marca para um público engajado com causas sociais e aumente sua visibilidade.",
+    description:
+      "Destaque sua marca para um público engajado com causas sociais e aumente sua visibilidade.",
   },
   {
     title: "Reconhecimento",
     icon: Trophy,
-    description: "Seja reconhecido como uma empresa que se preocupa com o bem-estar social e faz a diferença.",
+    description:
+      "Seja reconhecido como uma empresa que se preocupa com o bem-estar social e faz a diferença.",
   },
-]
+];
 
 export default function PartnershipsPage() {
   return (
-    <main className="min-h-screen">
-      {/* Hero Section */}
-      <div className="bg-[#2B5329] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4">Parcerias que Transformam</h1>
-          <p className="text-xl">Junte-se a nós para fazer a diferença na vida de quem precisa</p>
+    <main className="min-h-screen bg-gray-50 py-12">
+      <div className="bg-[#2B5329] text-white py-16">
+        <div className="max-w-7xl mx-auto sm:px-6 lg:px-8 px-4 text-center">
+          <h1 className="text-4xl sm:text-5xl font-bold">
+            Parcerias que Transformam
+          </h1>
+          <p className="text-xl">
+            Junte-se a nós para fazer a diferença na vida de quem precisa
+          </p>
         </div>
       </div>
 
-      {/* Benefits Section */}
       <div className="max-w-7xl mx-auto px-4 py-16">
-        <h2 className="text-3xl font-bold text-center text-[#2B5329] mb-12">Por que ser um parceiro?</h2>
+        <h2 className="text-3xl font-bold text-center text-[#2B5329] mb-12">
+          Por que ser um parceiro?
+        </h2>
 
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {benefits.map((benefit, index) => (
             <Card key={index} className="text-center">
               <CardContent className="pt-6">
                 <div className="flex justify-center mb-4">
-                  <benefit.icon className="h-12 w-12 text-blue-500" />
+                  <benefit.icon className="h-12 w-12 text-orange-600" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.description}</p>
@@ -51,11 +57,12 @@ export default function PartnershipsPage() {
           ))}
         </div>
 
-        <h2 className="text-3xl font-bold text-center text-[#2B5329] mb-12">Tipos de Parceria</h2>
+        <h2 className="text-3xl font-bold text-center text-[#2B5329] mb-12">
+          Tipos de Parceria
+        </h2>
         <PartnershipTypes />
         <PartnershipCTA />
       </div>
     </main>
-  )
+  );
 }
-
