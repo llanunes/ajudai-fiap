@@ -1,6 +1,13 @@
 "use client";
 
-import { MapPin, Trash } from "lucide-react";
+import {
+  House,
+  Info,
+  MapPin,
+  Phone,
+  PlusCircleIcon,
+  Users,
+} from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import dayjs from "dayjs";
@@ -122,13 +129,14 @@ export default function EventInfo({ params }) {
       <main className="max-w-4xl mx-auto px-6 py-12">
         <section className="mb-12 flex justify-center items-center gap-3 text-white">
           <div className="flex items-center gap-3 bg-[#2B5329] text-white  p-2 w-full justify-center">
-            <MapPin className="h-5 w-5" />
+            <House className="h-5 w-5" />
             <span className="text-xl font-semibold">{event.location}</span>
           </div>
         </section>
 
         <section className="mb-12">
-          <h2 className="text-3xl font-semibold text-[#2B5329] mb-4">
+          <h2 className="text-3xl font-semibold text-[#2B5329] mb-4 flex items-center gap-2">
+            <MapPin className="h-6 w-6 text-[#2B5329]" />
             Endereço
           </h2>
           <p className="text-gray-800">
@@ -144,28 +152,32 @@ export default function EventInfo({ params }) {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-3xl font-semibold text-[#2B5329] mb-4">
+          <h2 className="text-3xl font-semibold text-[#2B5329] mb-4 flex items-center gap-2">
+            <Info className="h-6 w-6 text-[#2B5329]" />
             Descrição
           </h2>
           <p className="text-gray-800">{event.description}</p>
         </section>
 
         <section className="mb-12">
-          <h2 className="text-3xl font-semibold text-[#2B5329] mb-4">
+          <h2 className="text-3xl font-semibold text-[#2B5329] mb-4 flex items-center gap-2">
+            <PlusCircleIcon className="h-6 w-6 text-[#2B5329]" />
             Informações Adicionais
           </h2>
           <p className="text-gray-800">{event.additionalInfo}</p>
         </section>
 
         <section className="mb-12">
-          <h2 className="text-3xl font-semibold text-[#2B5329] mb-4">
+          <h2 className="text-3xl font-semibold text-[#2B5329] mb-4 flex items-center gap-2">
+            <Users className="h-6 w-6 text-[#2B5329]" />
             Organizador
           </h2>
           <p className="text-gray-800">{event.organizer}</p>
         </section>
 
         <section className="mb-12">
-          <h2 className="text-3xl font-semibold text-[#2B5329] mb-4">
+          <h2 className="text-3xl font-semibold text-[#2B5329] mb-4 flex items-center gap-2">
+            <Phone className="h-6 w-6 text-[#2B5329]" />
             Contato
           </h2>
           <p className="text-gray-800">{event.contact}</p>
