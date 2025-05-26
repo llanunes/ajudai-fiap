@@ -5,7 +5,7 @@ export function Footer() {
         <p>
           © {new Date().getFullYear()} AjudAí - Todos os direitos reservados.{" "}
           <a
-            href="https://www.youtube.com/watch?v=xUdy8nuCfmM"
+            href="https://www.youtube.com/watch?v=6HvgSJ-yX5A"
             target="_blank"
             rel="noopener noreferrer"
             className="underline hover:text-gray-300"
